@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    <link rel="stylesheet" href="assets/img/css/style.css">
 </head>
 
-<body>
+<body style="background-color: greenyellow;">
 
     <ul id="menu">
         <li>
@@ -19,26 +20,27 @@
         </li>
     </ul>
 
-    <h1 class="center">Entre em contato comigo</h1>
+    <h1 class="center"; style="color: rgba(128, 22, 45, 0.973);">Entre em contato comigo</h1>
 
     <div class="container mb-50">
 
         <div>
 
             <form>
-                <label for="nome">Nome:</label> <br>
-                <input type="text" id="nome">
-                <br>
+                <label for="nome";>Nome:</label> <br>
+                <input type="text" id="nome" onkeyup="validaNome()">
+                <div id="txtNome"></div>
                 <br>
                 <label for="email">E-mail:</label> <br>
-                <input type="email" id="email">
-                <br>
+                <input type="email" id="email" id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
                 <br>
                 <label for="assunto">Assunto:</label> <br>
-                <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
                 <br>
                 <br>
-                <button>Enviar</button>
+                <button onclick="enviar()" >Enviar</button>
             </form>
         </div>
 
@@ -52,7 +54,7 @@
             3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1fcbb14893d1%3A0x3570ec824158b0bb!
             2sAv.%20Visc.%20de%20Jequitinhonha%2C%20130%20-%20Boa%20Viagem%2C%20Recife%20-%20PE%2C%2051130-020!
             5e0!3m2!1spt-BR!2sbr!4v1653001686257!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
 
         </div>
 
@@ -73,6 +75,8 @@
             Todos os direito reservados: Thays Limeira &copy;
         </p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 
 </body>
 
